@@ -1,0 +1,18 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+
+input.red {
+  border-color: red;
+  color: black;
+}
+
+input.green {
+  border-color: green;
+  color: black;
+}
