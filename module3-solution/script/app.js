@@ -11,7 +11,7 @@
     var ddo = {
       templateUrl: 'item.html',
       scope: {
-        found: '<'
+        foundItems: '<'
       }
     }
     return ddo;
