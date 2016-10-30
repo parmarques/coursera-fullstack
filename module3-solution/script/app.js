@@ -35,7 +35,6 @@
 
       vm.getItems = function() {
           MenuSearchService.getMatchedMenuItems(vm.searchTerm).then(function(dataResponse) {
-            console.log(dataResponse);
             vm.found = dataResponse;
           });
       }
