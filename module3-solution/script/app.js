@@ -12,10 +12,7 @@
       templateUrl: 'item.html',
       scope: {
         found: '<'
-      },
-      controller:FoundItemsDirectiveController,
-      controllerAs:'list',
-      bindToController: true
+      }
     }
     return ddo;
   };
