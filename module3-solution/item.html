@@ -1,0 +1,10 @@
+<div>
+<ul>
+  <li ng-reapeat="item in found">
+    {{item.short_name}},{{item.name}},{{item.description}}
+    <button class="btn btn-primary" ng-click="onRemove($index);">Don't want this one!</button>
+
+  </li>
+</ul>
+
+</div>
