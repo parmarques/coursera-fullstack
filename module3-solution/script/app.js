@@ -12,11 +12,17 @@
       template: 'item.html',
       scope: {
         foundItems: '<'
-      }
+      },
+      controller: FoundItemsDirectiveController,
+      controllerAs: 'list',
+      bindToController: true
     };
     return ddo;
   };
 
+  function FoundItemsDirectiveController() {
+     var list = this;
+  };
 
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
