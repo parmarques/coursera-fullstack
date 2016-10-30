@@ -1,7 +1,7 @@
 <br><br>
 <div class="row">
 <span ng-if="list.foundItems.length === 0">Nothing found!</span>
-<ul ng-if="list.foundItems.length > 0">
+<ul style="margin-top:15px"  ng-if="list.foundItems.length > 0">
   <li ng-repeat="item in list.foundItems">
     {{item.short_name}},{{item.name}},{{item.description}}
     <button class="btn btn-danger" ng-click="list.onRemove({index: $index})">Don't want this one!</button>
