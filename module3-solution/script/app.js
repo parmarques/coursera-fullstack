@@ -9,12 +9,11 @@
 
   function FoundItemsDirective() {
     var ddo = {
+      restrict: 'E',
       templateUrl: 'item.html',
       scope: {
-        restrict: 'E',
         foundItems: '<',
         onRemove: '&'
-
       },
       controller: FoundItemsDirectiveController,
       controllerAs: 'list',
