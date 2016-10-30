@@ -11,8 +11,7 @@
     var ddo = {
       templateUrl: 'item.html',
       scope: {
-        found: '<',
-        onRemove: '&removeItem'
+        found: '<'
       },
       controller:FoundItemsDirectiveController,
       controllerAs:'list',
