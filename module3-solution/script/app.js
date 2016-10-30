@@ -12,8 +12,11 @@
       templateUrl: 'item.html',
       scope: {
         found: '<',
-        onRemove: '&'
-      }
+        onRemove: '&removeItem'
+      },
+      controller:FoundItemsDirectiveController,
+      controllerAs:'list',
+      bindToController: true
     }
     return ddo;
   };
