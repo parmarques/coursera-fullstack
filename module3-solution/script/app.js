@@ -9,9 +9,9 @@
 
   function FoundItemsDirective() {
     var ddo = {
-      templateUrl: 'item.html',
+      template: 'item.html',
       scope: {
-        foundItems: '<foundItems'
+        foundItems: '<'
       }
     };
     return ddo;
