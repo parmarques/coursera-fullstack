@@ -11,7 +11,7 @@
     var ddo = {
       template: 'item.html',
       scope: {
-        foundItems: '<'
+        items: '<'
       },
       controller: FoundItemsDirectiveController,
       controllerAs: 'list',
