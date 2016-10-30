@@ -34,9 +34,14 @@
       vm.found = null;
 
       vm.getItems = function() {
-          MenuSearchService.getMatchedMenuItems(vm.searchTerm).then(function(dataResponse) {
+         if(!vm.searchTerm.trim()) {
+           vm.found = [];
+           return;
+         }
+         MenuSearchService.getMatchedMenuItems(vm.searchTerm).then(function(dataResponse) {
             vm.found = dataResponse;
-          });
+         });
+         
       }
 
       vm.removeItem = function(index) {
