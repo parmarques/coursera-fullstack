@@ -19,7 +19,7 @@
             templateUrl: 'categories.html',
             controlller: 'CategoriesController as ctrl',
             resolve: {
-              data: ['MenuDataService', function(MenuDataService) {
+              categories: ['MenuDataService', function(MenuDataService) {
                 return MenuDataService.getAllCategories();
 
               }]
@@ -30,7 +30,7 @@
             templateUrl: 'items.html',
             controlller: 'ItemsController as ctrl',
             resolve: {
-              data: ['MenuDataService, $stateParams', function(MenuDataService, $stateParams) {
+              items: ['MenuDataService, $stateParams', function(MenuDataService, $stateParams) {
                 return MenuDataService.getItemsForCategory($stateParams.id);
 
               }]
