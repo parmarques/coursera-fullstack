@@ -17,7 +17,7 @@
         .state('categories', {
             url: '/categories',
             templateUrl: 'categories.html',
-            controlller: 'CategoriesController as ctrl',
+            controlller: 'CategoriesController as catCtrl',
             resolve: {
               categories: ['MenuDataService', function(MenuDataService) {
                 return MenuDataService.getAllCategories();
@@ -28,7 +28,7 @@
         .state('items', {
             url: '/items/{id}',
             templateUrl: 'items.html',
-            controlller: 'ItemsController as ctrl',
+            controlller: 'ItemsController as itemsCtrl',
             resolve: {
               items: ['MenuDataService, $stateParams', function(MenuDataService, $stateParams) {
                 return MenuDataService.getItemsForCategory($stateParams.id);
