@@ -16,14 +16,8 @@
         })
         .state('categories', {
             url: '/categories',
-            templateUrl: 'categories.html',
-            controlller: 'CategoriesController as ctrl',
-            resolve: {
-              categories: ['MenuDataService', function(MenuDataService) {
-                return MenuDataService.getAllCategories();
+            templateUrl: 'categories.html'
 
-              }]
-            }
         })
         .state('items', {
             url: '/items/{id}',
