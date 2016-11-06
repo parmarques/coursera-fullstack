@@ -1,0 +1,10 @@
+<br><br>
+<div class="row">
+<span ng-if="$ctrl.data.length === 0">Nothing found!</span>
+<ul style="margin-top:15px"  ng-if="$ctrl.data.length > 0">
+  <li ng-repeat="category in $ctrl.data">
+    <a ui-sref="items({id: category.short_name})">{{category.name}}</a>
+  </li>
+</ul>
+
+</div>
