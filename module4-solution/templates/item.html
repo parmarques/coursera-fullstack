@@ -1,0 +1,16 @@
+<div class="row">
+<span ng-if="$ctrl.data.length === 0">Nothing found!</span>
+
+<table ng-if="$ctrl.data.length > 0" class="table table-condensed">
+  <tr class="active">
+      <td><b>Name</b></td>
+      <td><b>Description</b></td>
+  </tr>
+  <tr ng-repeat="item in $ctrl.data" ng-class="{success : ($index % 2 === 0)}">
+      <td>{{item.name}}</td>
+      <td>{{item.description}}</td>
+  </tr>
+</table>
+
+
+</div>

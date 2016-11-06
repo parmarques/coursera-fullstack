@@ -1,7 +1,7 @@
 (function() {
   "use strict"
 
-  angular.module('MenuApp', ['ui.router'])
+  angular.module('MenuApp')
     .config(RoutesConfig);
 
   RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -12,27 +12,28 @@
       $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'home.html'
+            templateUrl: 'templates/home.html'
         })
         .state('categories', {
             url: '/categories',
-            templateUrl: 'categories.html',
-            controlller: 'CategoriesController as catCtrl',
+            templateUrl: 'templates/categories.html',
+            controller: 'CategoriesController as catCtrl',
             resolve: {
               categories: ['MenuDataService', function(MenuDataService) {
                 return MenuDataService.getAllCategories();
-
               }]
             }
         })
         .state('items', {
             url: '/items/{id}',
-            templateUrl: 'items.html',
-            controlller: 'ItemsController as itemsCtrl',
+            templateUrl: 'templates/items.html',
+            controller: 'ItemsController as itemsCtrl',
             resolve: {
-              items: ['MenuDataService, $stateParams', function(MenuDataService, $stateParams) {
+              items: ['$stateParams','MenuDataService', function($stateParams, MenuDataService) {
                 return MenuDataService.getItemsForCategory($stateParams.id);
-
+              }],
+              category: ['$stateParams','MenuDataService', function($stateParams) {
+                return $stateParams.id;
               }]
             }
         })
